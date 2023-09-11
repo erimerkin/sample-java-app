@@ -2,7 +2,7 @@ FROM maven:3.9.4-eclipse-temurin-20 AS builder
 WORKDIR /build
 COPY pom.xml ./
 COPY ./src ./src
-RUN mvn clean package -e -X
+RUN mvn clean package -q
  
  
 FROM eclipse-temurin:20-jre-jammy

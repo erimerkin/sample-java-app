@@ -1,10 +1,27 @@
 # Getting Started
 
-## SampleCall
-
+## Sample Usage
 - `./mvnw package`
 - `java -jar ./target/app-0.0.1-SNAPSHOT.jar`
-- `http://localhost:9001/api/foos?val=TEST`
+- **EndpointUsage**
+## Docker Usage
+- `docker build -t sample-java-app .`
+- `docker run -p 9001:9001 -t sample-java-app`
+- **EndpointUsage**
+
+## Endpoint Usage
+You can plug in any number of parameters with `&` between them, also you can use any key name in place of `<param_name>` slots.
+- `http://localhost:9001/api/query?<param_name1>=<val1>&<param_name2>=<val2>&...`
+
+#### Example Usage:
+`http://localhost:9001/api/query?test=val&string=test`
+
+will output the following response:
+
+`Query parameters: test = val, string = test,`
+
+
+
 
 ### Reference Documentation
 
